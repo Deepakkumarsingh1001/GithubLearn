@@ -1,0 +1,256 @@
+/* Dark mode toggle button */
+.dark-toggle {
+  display: block;
+  margin: 0 auto 1.2rem auto;
+  background: #f1f5f9;
+  color: var(--primary);
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+}
+.dark-toggle.active,
+.dark-toggle[aria-pressed="true"] {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.dark-toggle:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+body.dark-mode {
+  background: #181a1b;
+  color: #e3e6eb;
+}
+body.dark-mode main {
+  background: #23272b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+body.dark-mode h1 {
+  color: #8ab4f8;
+}
+body.dark-mode input[type="text"] {
+  background: #23272b;
+  color: #e3e6eb;
+  border: 1px solid #374151;
+}
+body.dark-mode button[type="submit"] {
+  background: #8ab4f8;
+  color: #181a1b;
+}
+body.dark-mode button[type="submit"]:hover,
+body.dark-mode button[type="submit"]:focus {
+  background: #4f8cff;
+  color: #fff;
+}
+body.dark-mode .filter-btn {
+  background: #23272b;
+  color: #8ab4f8;
+  border: 1px solid #374151;
+}
+body.dark-mode .filter-btn.active,
+body.dark-mode .filter-btn[aria-pressed="true"] {
+  background: #8ab4f8;
+  color: #181a1b;
+  border-color: #8ab4f8;
+}
+body.dark-mode .task-item {
+  background: #23272b;
+  color: #e3e6eb;
+}
+body.dark-mode .task-item.completed {
+  background: #1e2b23;
+  color: #7e8a8d;
+}
+body.dark-mode .dark-toggle {
+  background: #23272b;
+  color: #8ab4f8;
+  border: 1px solid #374151;
+}
+body.dark-mode .dark-toggle.active,
+body.dark-mode .dark-toggle[aria-pressed="true"] {
+  background: #8ab4f8;
+  color: #181a1b;
+  border-color: #8ab4f8;
+}
+body.dark-mode ul.task-list {
+  background: transparent;
+}
+body.dark-mode .task-actions .action.complete {
+  color: #2ecc40;
+}
+body.dark-mode .task-actions .action.delete {
+  color: #ff4136;
+}
+/* Modern, accessible, responsive Task Manager styles */
+:root {
+  --primary: #4f8cff;
+  --accent: #2ecc40;
+  --danger: #ff4136;
+  --bg: #f7f9fa;
+  --text: #222;
+  --radius: 0.5rem;
+  --shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  margin: 2rem 0;
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover,
+button[type="submit"]:focus {
+  background: #2563eb;
+}
+
+ul.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f1f5f9;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  transition: background 0.2s;
+}
+
+li.task-item.completed {
+  background: #e0f7e9;
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+button.action {
+  background: none;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+button.action.complete {
+  color: var(--accent);
+}
+button.action.delete {
+  color: var(--danger);
+}
+button.action:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+
+/* Filter button group */
+.filter-nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.filter-btn {
+  background: #f1f5f9;
+  color: var(--primary);
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius);
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+}
+.filter-btn.active,
+.filter-btn[aria-pressed="true"] {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.filter-btn:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  button[type="submit"] {
+    padding: 0.7rem 0.7rem;
+    font-size: 0.95rem;
+  }
+  .filter-nav {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .filter-btn {
+    width: 100%;
+    font-size: 0.98rem;
+  }
+}
